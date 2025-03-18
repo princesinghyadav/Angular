@@ -1,0 +1,37 @@
+<h1>this is the page of learning directives!</h1>
+
+<h3> this is *ngif directives  </h3>
+<p>this is toggle button used to make condition true => false </p>
+<button (click)="isVisible = !isVisible">  Toggle button </button>
+
+<div *ngIf="isVisible; else elseBlok">
+  <p>The content is visible! when condition is true </p>
+</div>
+<ng-template #elseBlok>  
+  <p>The content is visible when condition is false !</p>
+</ng-template>
+
+<div *ngIf="isVisible then showBlock else hideBlock" > </div>
+<ng-template #showBlock>
+<p> its working condition is true </p>
+</ng-template>
+<ng-template #hideBlock>
+  <p> working when condition is false  </p>
+  </ng-template>
+ 
+
+  <!-- <p> this is for for loop directives </p> -->
+
+  <!-- <p *ngFor="let itm for items">
+    {{itm}}    
+   </p> -->
+
+
+   <h2> this is example of  ng class directives</h2>
+
+<h3> this button makes the condition true or false </h3>
+   <button (click)="toggleActive()">Toggle Active</button>
+
+<div [ngClass]="{ 'active': isActive }">
+  This div will have the 'active' class when `isActive` is true.
+</div>

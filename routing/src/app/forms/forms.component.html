@@ -1,0 +1,75 @@
+<h2>this is about forms !</h2>
+
+  <h3>two types of forms </h3>
+   <h2> 1.  Template -driven -forms (Easy to use ,used for simple forms)</h2>
+
+    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+      <div>
+        <label>Name : </label>
+        <input [(ngModel)]="user.name" type="text" placeholder="enter your name"
+        #name="ngModel" name="name" ngModel required minlength="4">
+   
+       <span *ngIf="name.errors?.['required']" style="color: red;"> 
+         Name is required </span>
+         <span *ngIf="name.errors?.['minlength']" style="color: red;"> Name should be atleast 4 characters </span>
+        
+      </div>
+     
+      <div>
+      <label>Email :</label>
+      <input [(ngModel)]="user.email" ngModel type="email" #email="ngModel" email  placeholder="enter your email" name="email"  required>
+     
+      <span *ngIf="email.errors?.['required']" style="color: red;"> 
+       eamil is required </span>
+     </div>
+    
+
+     <div>
+      <label>Contact :</label>
+      <input [(ngModel)]="user.contact" ngModel type="number" placeholder="enter your mobile no." 
+      name="contact" #contact="ngModel" required minlength="10" maxlength="10">
+      <span *ngIf="contact.errors?.['required']" style="color: red;"> 
+        contact information is required </span>
+        <span *ngIf="contact.errors?.['minlength']" style="color: red;"> 
+          this is not a valid no. please check </span>
+          <span *ngIf="contact.errors?.['maxlength']" style="color: red;"> 
+            phone no. should  not be more than 10 digit</span>
+     </div>
+    
+<div> 
+  <label>Gender :</label>
+  <select [(ngModel)]="user.gender" ngModel name="gender" required #gen="ngModel">
+   <option value="Male">Male</option>
+   <option value="Female">Female</option>
+   <option value="Other">Other</option>
+  </select>
+  <span *ngIf="gen.errors?.['required']" style="color: red;"> 
+    gender   is required </span>
+</div>
+  
+<div> 
+  <label> Password :</label>
+  <input type="password" ngModel id="password" required minlength="6" maxlength="12" name="password" #passw="ngModel"  [(ngModel)]="user.password"> 
+  <span *ngIf="passw.errors?.['required']" style="color: red;">Password is Must required </span>
+  <span *ngIf="passw.errors?.['minlength']" style="color: red;">Password is not less than 6 digit </span>
+  <span *ngIf="passw.errors?.['maxlength']" style="color: red;">Password shouldnot extend more than 12 digit  </span>
+</div>
+     <button type="submit" [disabled]="myForm.invalid" >Submit </button>
+    
+    </form>
+ <h2 *ngIf="isSubmitted"> Forms submitted successfully ✅</h2>
+ <br>
+ <br><br>
+ 
+
+ <ul>
+
+       1.import forms module from angular . 
+  <li> They follow a view-driven approach</li>
+  <li>Forms are created and validations are handled directly in the template.</li>
+  <li>Asynchronous data flow.</li>
+  <li>More suitable for simple and static forms.</li>
+  <li>Form controls are accessed using template reference variables.</li>
+  <li>Form validations are applied using the built-in directives.</li>
+ </ul>
+ 

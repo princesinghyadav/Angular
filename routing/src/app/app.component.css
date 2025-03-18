@@ -1,0 +1,10 @@
+.navv{
+    display: flex;
+    width: 50%;
+    height: 100px;
+    /* border: 2px dotted black; */
+    padding: 25px;
+    justify-content: space-between;
+    font-size: larger;
+    font-style: oblique;
+}
