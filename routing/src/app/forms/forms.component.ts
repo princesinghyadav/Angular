@@ -8,9 +8,9 @@ import { Validator, FormGroup ,FormControl } from '@angular/forms';
 export class FormsComponent {
 
 user:any ={name:'', gender:"" ,email:"",contact:"",password:''}
- 
+
  isSubmitted :boolean=false;
- 
+
 //  if( user.name=="" ){
 //   console.log( user.name)
 //  isSubmitted=true;
@@ -20,14 +20,14 @@ user:any ={name:'', gender:"" ,email:"",contact:"",password:''}
 onSubmit(form:any){
   if(form.invalid){
     alert("please fill mandatory information ")
-    return 
+    return
   }
   //  else{
      console.log("userdetails :",this.user);
     this.isSubmitted=true;
   // }
 
-  
+
 }
 
 
@@ -40,7 +40,7 @@ onSubmit(form:any){
  submitted :boolean=false
 
  full:any={name:""}
- 
+
   final(){
 
     console.log(this.full);

@@ -2,5 +2,10 @@ h1{
     color: rgb(0, 128, 13);
     margin: auto;
     width: 50%;
-    
+
+}
+.content{
+
+   border-radius: 20px;
+   background-color: aqua;
 }

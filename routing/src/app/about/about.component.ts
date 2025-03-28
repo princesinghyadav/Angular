@@ -19,6 +19,9 @@ export class AboutComponent {
       {
         path:'forms',
         label:'forms'
+      },{
+        path:'reactive',
+        label:'reactive-forms '
       }
     ]
 }

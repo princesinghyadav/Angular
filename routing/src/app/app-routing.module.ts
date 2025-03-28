@@ -11,7 +11,7 @@ import { ProComponent } from './pro/pro.component';
 import {BindingComponent} from  './binding/binding.component'
 import {DirectivesComponent} from './directives/directives.component'
 import {FormsComponent} from './forms/forms.component'
-
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 const routes: Routes = [
   {
@@ -30,9 +30,13 @@ const routes: Routes = [
         path:'forms',
         title:'forms',
         component:FormsComponent
+      },{
+        path:'reactive',
+        title:'reactiveforms',
+        component:ReactiveformsComponent
       }
     ]
-   
+
   },
   {
     path:"contact",component:ContactComponent,
@@ -65,7 +69,7 @@ const routes: Routes = [
   },
   {
     path:'**',component:NotfoundComponent
-   
+
   }
 ];
 

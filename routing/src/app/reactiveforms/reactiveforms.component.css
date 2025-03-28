@@ -1,0 +1,19 @@
+.form-style{
+    display: flex;
+    flex-direction: column;
+    /* padding: 25px; */
+    /* margin: 29px; */
+}
+.form-style>div{
+
+    margin: 29px;
+}
+.form-style>div>input{
+    height: 35px;
+    width: auto;
+}
+.form-style>button{
+    height: 25px;
+    width: 20%;
+    margin: auto;
+}

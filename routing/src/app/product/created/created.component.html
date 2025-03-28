@@ -1,0 +1,12 @@
+
+<button style="height: 40px; width: 90px;" (click)="iscreatingtask()" [disabled]="creating"> Add lists</button>
+<div *ngIf="creating">
+  <form (ngSubmit)="addedtask(myForm)" #myForm="ngForm" >
+    <input type="text" placeholder="Enter the name"  name="name" [(ngModel)]="pusshobj.name"  />
+    <input type="text" placeholder="Enter thge price in dollar$" name="price" [(ngModel)]="pusshobj.price" >
+    <input type="text" placeholder="Enter the quantity in kg " name="quantity" [(ngModel)]="pusshobj.quantity" >
+    <input type="submit" >
+    <button (click)="cancel()"> cancel</button>
+  </form>
+<!-- <p>  {{pusshobj.name}}</p> -->
+</div>

@@ -3,7 +3,7 @@
   <h3>two types of forms </h3>
    <h2> 1.  Template -driven -forms (Easy to use ,used for simple forms)</h2>
 
-    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm" class="form-style">
       <div>
         <label>Name : </label>
         <input [(ngModel)]="user.name" type="text" placeholder="enter your name"

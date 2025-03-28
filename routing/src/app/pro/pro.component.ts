@@ -7,13 +7,19 @@ import { JsonComponent } from '../json/json.component';
 })
 export class ProComponent {
 
-  
-data = new JsonComponent()
+
+data = new JsonComponent ()
 jsonData = this.data.fakedata;
 
   set(id :number){
 
     localStorage.setItem("user",JSON.stringify(this.jsonData[id]))
   }
- 
+  pushed(data:any){
+    this.jsonData.unshift(data);
+    console.log(this.jsonData);
+
+
+    }
+
 }

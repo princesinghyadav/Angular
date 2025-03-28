@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { jsonService } from './json.service';
+import { jsonService } from './json.service';
 @Component({
   selector: 'app-json',
   templateUrl: './json.component.html',
@@ -61,35 +62,53 @@ export class JsonComponent {
       "price":3
 
     }
-   ]
-   
+  ]
+normol:string='';
+  //  constructor(public jsonService : jsonService){
+  //   this.normol  =this.jsonService.getindat()
+  //  }
+  // arra:string[] =[];
 
-   Data = this.fakedata.map(user => ({
+  Data = this.fakedata.map(user => ({
     Name: `${user.name}`,
     quantity:`${user.quantity} `,
     price:` ${user.price}`,
     id:`${user.id}`
   }));
 
-   
-   getItemm(){
+
+  getItemm(){
     //  let oneview :string | null |any =localStorage.getItem("user")
   //    console.log(JSON.parse(oneview)) ;
-      
+
   // console.log(oneview?.id)
   const storedData = localStorage.getItem('user');
 const parsedData = storedData ? JSON.parse(storedData) : null;
- this.idd = parsedData.id
- this.quantity=parsedData.quantity
- this.name=parsedData.name
- this.price=parsedData.price
+  this.idd = parsedData.id
+  this.quantity=parsedData.quantity
+  this.name=parsedData.name
+  this.price=parsedData.price
 
-// console.log(parsedData?.id)
+console.log(typeof(parsedData?.id))
 
-   }
-   ngOnInit() {
+  }
+  ngOnInit() {
     this.getItemm(); // Call function inside ngOnInit
   }
+cou=0
+handle(count:number){
+this.cou=count;
+
+}
+ch="s"
+checkk(check :string){
+this.ch=check;
+
+}
+// constructor( public jsonService :jsonService){
+// this.arra= this.jsonService.getdata()
+
+// }
 
 }
 

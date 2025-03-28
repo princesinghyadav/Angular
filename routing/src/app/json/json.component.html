@@ -1,28 +1,44 @@
- 
 
-   <!-- <div *ngFor="let item of fakedata "  
-   (onload)="getItemm()" >
-   <h1> {{item.id}}</h1>
-   
+<!-- <h2> this is from the process of forloop like map in react </h2> -->
+<!-- <ul>
+  <li *ngFor="let samplw of fakedata">
+<h1> {{samplw.id}}</h1>
+</li>
+</ul> -->
 
-    
+   <!-- <div *ngFor="let item of fakedata "
+  (onload)="getItemm()" >
+  <h1> {{item.id}}</h1>
+
+
+
 </div> -->
 
 <!-- <button (click)="getItemm()"> get user </button> -->
 
- <div  (onload)="getItemm()" class="product" >
+<app-propsshare [msg]="name" (Even)="checkk($event)" (selectorr)="handle($event)" [quantity]="quantity"  price={{price}}  [idd]="idd"/>
+<h1>  hjnj</h1>
+<h1> {{ch}}</h1>
+<!-- {{name}} -->
+
+<!-- <div  (onload)="getItemm()" class="product" >
   <h1>{{idd}}</h1>
   <h2>{{name}}</h2>
   <h3>{{quantity}}</h3>
   <h3>{{price}}</h3>
- </div>
+
+</div> -->
+
+  <!-- <h1>{{idd}}</h1>
+  <h2>{{name}}</h2>
+  <h3>{{quantity}}</h3>
+  <h3>{{price}}</h3> -->
 
 
 
- 
-<!-- 
+<!--
 <div (onload)="getItemm">
-   <h1>{{asdfa}}</h1>
+  <h1>{{asdfa}}</h1>
 </div> -->
 <!-- <h1>{{asdfa}}</h1> -->
 
@@ -30,13 +46,14 @@
 <!-- <div>
     <ul>
         <li *ngFor="let user of oneview">
-         <h2> {{ user.Name }}</h2>
-         <h2> {{ user.price }}</h2>
-         <h3> {{ user.quantity }}</h3>
-         <h5>{{user.id}}</h5>
-         
+        <h2> {{ user.Name }}</h2>
+        <h2> {{ user.price }}</h2>
+        <h3> {{ user.quantity }}</h3>
+        <h5>{{user.id}}</h5>
+
         </li>
-      
-           
+
+
       </ul>
 </div> -->
+

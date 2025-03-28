@@ -1,25 +1,32 @@
- 
-<div >
-    <ul>
 
 
-        <div class="product">
-          <li *ngFor="let user of jsonData">
-            <div style="border: 2px solid black; margin: 20px; ">
-              <a (click)="set(user.id)" [routerLink]="['/product/',user.id ]">{{user.id}}
-                <h2> {{ user.name }}</h2>
-                <h2> {{ user.price }}</h2>
-                <h3> {{ user.quantity }}</h3>
-             
-            </a>
+  <div >
+    <app-created  (formdata)="pushed($event)"/>
+      <ul>
 
-            </div>
-           
-         
-        </li>
-        </div>
 
-      
-           
-      </ul>
-</div>
+          <div class="product">
+            <!-- <app-firstchild> -->
+            <li *ngFor="let user of jsonData">
+              <div style="border: 2px solid black; margin: 20px; ">
+                <a (click)="set(user.id)" [routerLink]="['/product/',user.id ]">{{user.id}}
+                  <h2> {{ user.name }}</h2>
+                  <h2> {{ user.price }}</h2>
+                  <h3> {{ user.quantity }}</h3>
+
+              </a>
+
+              </div>
+
+
+          </li>
+        <!-- </app-firstchild> -->
+          </div>
+
+
+        </ul>
+
+  </div>
+
+
+

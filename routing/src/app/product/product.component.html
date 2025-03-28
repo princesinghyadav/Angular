@@ -1,11 +1,23 @@
 <h1>this is a product page !</h1>
 
+
+
 <!-- <li><a routerLink=":3">see the product </a> </li> -->
- <!-- <button (click)="set()"> click to set data local</button> -->
- <!-- <button (click)="get()"> click to get data local</button> -->
+<!-- <button (click)="set()"> click to set data local</button> -->
+<!-- <button (click)="get()"> click to get data local</button> -->
 
 <!-- <a [routerLink]="['/product/',2 ]">View User by id </a> -->
- <a  routerLink="list"> see the list</a>
+<a  routerLink="list"> see the list</a>
+
+
   <router-outlet></router-outlet>
+
+<button (click)="state()" style="border: 0ch; margin-left: 20px ;"><p>{{storedvalue.id}}</p>
+  <p> {{storedvalue.price}}</p>
+</button>
+
+<!-- <p *ngFor="let user of componentvalue">
+{{user.name}}
+</p> -->
 
 <!-- <app-json></app-json> -->

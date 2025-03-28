@@ -17,6 +17,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
+import { PropsshareComponent } from './propsshare/propsshare.component';
+import { CreatedComponent } from './product/created/created.component';
+import { ServiinjectComponent } from './serviinject/serviinject.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component'
     BindingComponent,
     DirectivesComponent,
     FormsComponent,
-    ReactiveformsComponent
+    ReactiveformsComponent,
+    PropsshareComponent,
+    CreatedComponent,
+    ServiinjectComponent
   ],
   imports: [
     BrowserModule,

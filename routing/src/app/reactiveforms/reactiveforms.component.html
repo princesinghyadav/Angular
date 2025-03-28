@@ -1,4 +1,88 @@
-<h1>2.  reactive- forms </h1>
+<h1>2.  Reactive-Forms  </h1>
+
+<form [formGroup]="userdetails" (ngSubmit)="submission()" class="form-style">
+    <div>
+        <label>Name : </label>
+        <input type="text" formControlName="namee" placeholder="enter the name">
+       <!-- <p *ngIf="userdetails.control.namee.invalid && userdetails.control.namee.touched">
+        <span style="color: red;">Name is required or atleast 4 digit.</span>  
+       </p> -->
+    </div>
+  
+<div>
+    <label>email :</label>
+    <input type="email" formControlName="emaill" placeholder="enter the email" >
+   <p *ngIf="userdetails?.control?.emaill?.invalid && userdetails?.control?.emaill?.touched">
+      <span style="color: red;">Enter a valid email.</span>  
+   </p>
+  
+</div>
+
+  <div>
+    <label> password :</label>
+    <input type="password" formControlName="passwordd" placeholder="enter the password">
+    <!-- <p *ngIf="userdetails.control.passwordd.invalid && userdetails.control.passwordd.touched">
+      <span style="color: red;">Password must be at  least 6 digits and not more than 12digit.</span>  
+   </p> -->
+  
+  </div>
+  
+
+
+  <button type="submit" [disabled]="userdetails.invalid">Submit </button>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1> Reactive forms </h1>
+
+
+<h3>📌 What are Reactive Forms?
+    Reactive Forms in Angular are used to manage complex form structures with
+     better scalability and validation. They provide better control, dynamic 
+     validation, and handling of form events.</h3>
+     <h4> formGroup :- in Angular Reactive Forms, FormGroup is a class that groups multiple FormControl elements
+        together, allowing you to manage their values and validation states as a single unit. </h4>
+    <h4> formControl :-is a class that tracks
+        the value and validation status of an individual input element. </h4>
+    <h4> Validation :- in Angular ensures that user inputs meet specific criteria before submission. 
+       It helps in maintaining data accuracy, security, and user experience by preventing invalid or incorrect inputs.</h4>
+    
+<h3>🔹 Key Features:</h3>
+<p>✔ Fully managed in the TypeScript (TS) component.
+   ✔ Uses FormGroup, FormControl, and FormArray.
+   ✔ Supports synchronous & asynchronous validation.
+   ✔ More scalable than Template-Driven Forms.</p>
 
 <ul>
     <li>They follow a model-driven approach.</li>
@@ -8,10 +92,3 @@
     <li>In reactive forms, the form control instances are accessed using FormControl and FormGroup.</li>
     <li>Form validations are applied using the built-in validator functions.</li>
 </ul>
-
-<h1> Reactive forms </h1>
-<h4> formGroup :-is a class that tracks 
-  the value and validation status of an individual input element. </h4>
-  <h4> formControl :-is a class that tracks
-     the value and validation status of an individual input element. </h4>
-    
