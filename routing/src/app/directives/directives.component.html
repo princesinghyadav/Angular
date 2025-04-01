@@ -7,7 +7,7 @@
 <div *ngIf="isVisible; else elseBlok">
   <p>The content is visible! when condition is true </p>
 </div>
-<ng-template #elseBlok>  
+<ng-template #elseBlok>
   <p>The content is visible when condition is false !</p>
 </ng-template>
 
@@ -18,12 +18,12 @@
 <ng-template #hideBlock>
   <p> working when condition is false  </p>
   </ng-template>
- 
+
 
   <!-- <p> this is for for loop directives </p> -->
 
   <!-- <p *ngFor="let itm for items">
-    {{itm}}    
+    {{itm}}
    </p> -->
 
 
@@ -32,6 +32,7 @@
 <h3> this button makes the condition true or false </h3>
    <button (click)="toggleActive()">Toggle Active</button>
 
-<div [ngClass]="{ 'active': isActive }">
+<!-- <div [ngClass]="{ 'active': isActive }"> -->
+  <div >
   This div will have the 'active' class when `isActive` is true.
 </div>

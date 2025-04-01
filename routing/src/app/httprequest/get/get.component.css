@@ -1,0 +1,13 @@
+.displ{
+  border: 2px solid black;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 7px;
+
+
+}
+.displ>div{
+  border: 2px solid red;
+  padding: 5px;
+}
+

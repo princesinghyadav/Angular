@@ -12,6 +12,11 @@ import {BindingComponent} from  './binding/binding.component'
 import {DirectivesComponent} from './directives/directives.component'
 import {FormsComponent} from './forms/forms.component'
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
+import { GetComponent } from './httprequest/get/get.component';
+import { HttprequestComponent } from './httprequest/httprequest.component';
+import { PostComponent } from './httprequest/post/post.component';
+import { UpdateComponent } from './httprequest/update/update.component';
+import { DeleteComponent } from './httprequest/delete/delete.component';
 
 const routes: Routes = [
   {
@@ -66,11 +71,31 @@ const routes: Routes = [
         component:JsonComponent
       }
     ]
+  },{
+    path:'fetch' , component:HttprequestComponent,
+    children:[
+      {
+        path:'post',
+        title:'postingdata',
+        component:PostComponent
+      },{
+        path:'get',
+        title:'Getmethod',
+        component:GetComponent
+      },{
+        path:'update',
+        title:'put/patch method',
+        component:UpdateComponent
+      },{
+        path:'delete',
+        title:'delete data',
+        component:DeleteComponent
+      }
+    ]
   },
   {
-    path:'**',component:NotfoundComponent
-
-  }
+    path:'**',component:NotfoundComponent,
+    },
 ];
 
 @NgModule({

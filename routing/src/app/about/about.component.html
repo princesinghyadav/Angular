@@ -1,9 +1,10 @@
 <h1>this is a home  page !</h1>
 
-<ul> 
-    <li *ngFor="let list of list "><a routerLink="{{list.path}}">{{list.label}} </a></li>
+<ul>
+  <li *ngFor="let list of list"><a routerLink="{{list.path}}">{{list.label}} </a></li>
 </ul>
- <div style="width: 60%; margin: auto;"> 
+<div style="width: 60%; margin: auto;">
   <router-outlet></router-outlet>
 
- </div>
+</div>
+
