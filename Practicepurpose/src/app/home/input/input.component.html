@@ -1,0 +1,58 @@
+<p style="color: white;">input works!</p>
+
+<div class="input-section">
+
+
+<div id="input-style">
+
+
+<form (ngSubmit)="onSubmit(myform )" #myform="ngForm" >
+  <div>
+    <p>
+    <label>Initial Investment:</label>
+    <input type="number" name="Initial" ngModel [(ngModel)]="InvestmentValue.initial">
+  </p>
+</div>
+
+  <div>
+    <p>
+
+      <label>Annual  Investment:</label>
+      <input type="number" name="annual" ngModel [(ngModel)]="InvestmentValue.annual">
+    </p>
+  </div>
+
+  <div>
+    <p>
+
+      <label>Expected return (%):</label>
+      <input type="number" name="interest" ngModel [(ngModel)]="InvestmentValue.interest">
+    </p>
+  </div>
+
+  <div>
+
+<p>
+
+  <label>Duration (in years): </label>
+  <input type="number" name="duration" ngModel [(ngModel)]="InvestmentValue.duration">
+
+</p>
+  </div>
+
+
+<div>
+  <p>
+    <button type="submit" id="btn">Calculate</button>
+  </p>
+</div>
+
+
+</form>
+
+
+
+
+</div>
+
+</div>

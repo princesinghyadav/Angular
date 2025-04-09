@@ -1,0 +1,35 @@
+.input-section {
+  border: 2px solid white;
+  height: 350px;
+  width: 60%;
+  margin:auto;
+  background-color: teal;
+
+}
+
+#input-style{
+border: 2px solid red ;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+/* grid-template-rows: repeat(2,1fr); */
+gap: 25px;
+padding: 18px;
+
+
+}
+#input-style>form>p>input{
+  border: 1px solid white;
+  height: 30px;
+  width: 70%;
+  border-radius: 10px;
+
+}
+
+ #btn{
+  border: 1px solid white;
+  background-color: teal;
+  width: 80%;
+  margin: auto;
+
+
+ }

@@ -1,0 +1,15 @@
+<p>event works!</p>
+
+<div style="background-color: aqua; color: red; height: 300px; width: 300px;"
+((mouseleave))="handleclick($event)"> 
+  
+     <h1 ((mouseleave))="handleclick($event)"> event checker </h1>
+ <input (input)="handleclick($event)"/> 
+ <p> {{count}}</p>
+</div>
+
+<div>
+   
+    <input  (input)="getvalue(emailv.value)"value={{count}}  type="text" #emailv /> 
+    <button (click)="setvalue()"> set value</button>
+</div>

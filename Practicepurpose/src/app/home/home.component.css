@@ -1,0 +1,14 @@
+.header>img{
+  width: 15%;
+  height: auto;
+
+  /* border: 2px solid red; */
+  /* margin: auto; */
+margin-left: 40%;
+
+}
+
+.header{
+  width: 99%;
+  /* border: 2px solid red; */
+}
